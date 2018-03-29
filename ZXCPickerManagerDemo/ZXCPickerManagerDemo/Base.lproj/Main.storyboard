@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9u-G9-umG">
+                                <rect key="frame" x="149" y="120" width="77" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="MO8-a1-5Np"/>
+                                </constraints>
+                                <state key="normal" title="时间选择器"/>
+                                <connections>
+                                    <action selector="selectTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpB-C8-gbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-Ld-eue">
+                                <rect key="frame" x="148.5" y="219" width="77" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="khb-03-UvP"/>
+                                </constraints>
+                                <state key="normal" title="普通选择器"/>
+                                <connections>
+                                    <action selector="selectItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erP-Jd-t2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-8q-3qc">
+                                <rect key="frame" x="126" y="309" width="123" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GNk-SL-nGx"/>
+                                </constraints>
+                                <state key="normal" title="省市区地址选择器"/>
+                                <connections>
+                                    <action selector="selestAddress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUp-pp-ts2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b8t-8q-3qc" firstAttribute="top" secondItem="Vw3-Ld-eue" secondAttribute="bottom" constant="50" id="FEg-Qo-gvv"/>
+                            <constraint firstItem="Vw3-Ld-eue" firstAttribute="top" secondItem="Z9u-G9-umG" secondAttribute="bottom" constant="50" id="Xbs-I2-Yf0"/>
+                            <constraint firstItem="Z9u-G9-umG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gG3-hh-g1E"/>
+                            <constraint firstItem="Z9u-G9-umG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="lTO-c6-zN7"/>
+                            <constraint firstItem="b8t-8q-3qc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sGO-Sg-7lo"/>
+                            <constraint firstItem="Vw3-Ld-eue" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zA4-aI-y3u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="b8t-8q-3qc" id="04W-Vl-Y2w"/>
+                        <outlet property="item" destination="Vw3-Ld-eue" id="OCS-Hq-ODt"/>
+                        <outlet property="time" destination="Z9u-G9-umG" id="MHx-Hn-O7P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
