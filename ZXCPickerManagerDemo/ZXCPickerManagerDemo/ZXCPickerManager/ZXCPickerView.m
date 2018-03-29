@@ -9,13 +9,11 @@
 #define UISCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #import "ZXCPickerView.h"
-#import "ZXCHeaderToolView.h"
 
 @interface ZXCPickerView()<UIPickerViewDelegate, UIPickerViewDataSource>
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, assign) NSInteger selectedRow;
-@property (nonatomic, strong) ZXCHeaderToolView *toolBar;
 @property (nonatomic, strong) UIView *containerView;
 
 @end

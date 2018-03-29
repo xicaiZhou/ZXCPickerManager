@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXCHeaderToolView.h"
+
 @interface ZXCPickerView : UIPickerView
+@property (nonatomic, strong) ZXCHeaderToolView *toolBar;
 
 - (void)showZXCPickerViewWithDataArray:(NSArray *)array commitBlock:(void(^)(NSString *string, NSInteger index))commitBlock cancelBlock:(void(^)(void))cancelBlock;
 @end

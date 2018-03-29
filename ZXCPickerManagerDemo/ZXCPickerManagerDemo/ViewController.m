@@ -30,8 +30,9 @@
 
 
 - (IBAction)selectItem:(id)sender {
-    [[ZXCPickerManager sharePickerManager] showZXCPickerViewWithDataArray:@[@"压缩", @"劫", @"德玛", @"比尔", @"恕瑞玛"] commitBlock:^(NSString * _Nonnull string, NSInteger index) {
-         [self.item setTitle:string forState:UIControlStateNormal];
+    
+    [[ZXCPickerManager sharePickerManager] showZXCPickerViewWithDataArray:@[@"压缩", @"劫", @"德玛", @"比尔", @"恕瑞玛"] title:@"请选择" commitBlock:^(NSString * _Nonnull string, NSInteger index) {
+        
     } cancelBlock:^{
         
     }];

@@ -40,7 +40,7 @@ typedef void (^PickerViewCancelBlock)(void);
  @param commitBlock 确定
  @param cancelBlock 取消
  */
-- (void)showZXCPickerViewWithDataArray:(NSArray *_Nonnull)array commitBlock:(void(^_Nonnull)(NSString * _Nonnull string, NSInteger index))commitBlock cancelBlock:(void(^_Nonnull)(void))cancelBlock;
+- (void)showZXCPickerViewWithDataArray:(NSArray *_Nonnull)array title:(NSString * _Nonnull)title commitBlock:(void(^_Nonnull)(NSString * _Nonnull string, NSInteger index))commitBlock cancelBlock:(void(^_Nonnull)(void))cancelBlock;
 /**
  *  show addressPicker with your custom title, cancelTitle, commitTitle
  *

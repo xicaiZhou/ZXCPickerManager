@@ -55,10 +55,12 @@
     
     self.datePicker.toolBar.cancelBarTitle = @"取消";
     self.datePicker.toolBar.commitBarTitle = @"确定";
+    self.datePicker.toolBar.titleBarTitle = @"请选择日期";
     [self.datePicker showZXCDatePickerWithMinimumDate:minimumDate maximumDate:maximumDate commit:commitBlock cancel:cancelBlock];
 }
-- (void)showZXCPickerViewWithDataArray:(NSArray *_Nonnull)array commitBlock:(void(^_Nonnull)(NSString * _Nonnull string, NSInteger index))commitBlock cancelBlock:(void(^_Nonnull)(void))cancelBlock{
+- (void)showZXCPickerViewWithDataArray:(NSArray *_Nonnull)array title:(NSString * _Nonnull)title commitBlock:(void(^_Nonnull)(NSString * _Nonnull string, NSInteger index))commitBlock cancelBlock:(void(^_Nonnull)(void))cancelBlock{
     
+    self.pickView.toolBar.titleBarTitle = title;
     [self.pickView showZXCPickerViewWithDataArray:array commitBlock:commitBlock cancelBlock:cancelBlock];
     
 }
